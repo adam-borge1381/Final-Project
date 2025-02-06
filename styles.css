@@ -23,6 +23,7 @@ a {
 
 p {
     font-size: 18px;
+    line-height: 1.5;
 }
 
 a:hover {
@@ -58,17 +59,21 @@ section {
     color: #6415ff;
     letter-spacing: 1.6px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .section__title {
     font-size: 32px;
     font-weight: 900;
     color: rgb(36, 62, 99);
-    line-height: 1.5px;
     margin: 16px 0;
     
 }
 
+button{
+    cursor: pointer;
+    border: none;
+}
 
 h1 {
     font-size: 36px;
@@ -80,6 +85,10 @@ h2 {
 
 img {
     width: 100%;
+}
+
+.section__tag {
+    color: #6415ff;
 }
 
 /* nav bar */
@@ -180,7 +189,6 @@ img {
 
 .landing__input--email {
     width: 100%;
-    max-width: 448px;
     border: 2px solid rgb(229, 231, 235);
     border-radius: 500px;
     padding: 20px 192px 20px 32px;
@@ -191,6 +199,7 @@ img {
     top: 0;
     bottom: 0;
     z-index: 1;
+    transition: border-color 300ms;
 }
 
 .landing__input--btn {
@@ -240,9 +249,7 @@ img {
     align-content: center;
 }
 
-.section__tag {
-    color: #6415ff;
-}
+
 
 #features .row {
     display: flex;
@@ -255,8 +262,9 @@ img {
 }
 
 .section__para {
-    text-align: center;
-    max-width: 576px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1
 }
 
 .feature__services {
@@ -305,13 +313,220 @@ img {
     align-items: center;
 }
 
+.quality__section--title {
+    font-size: 48px;
+    font-weight: 900;
+    color: rgb(36, 62, 99);
+    margin: 16px 0;
+}
+
 
 .quality__discription {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
-
+.quality__btn {
+    background-color: #6415ff;
+    color: #fff;
+    border: none;
+    border-radius: 500px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 32px;
+    margin-top: 32px;
+}
 .quality__img--wrapper {
-    width: 50%
+    width: 50%;
+    position: relative;
+    margin: 0 56px;
+
+}
+
+
+/* STEPS */
+
+
+#steps .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.steps__img--wrapper, .steps__description {
+    width: 50%;
+}
+
+.steps__description {
+    padding:32px 0 32px 64px;
+}
+
+.step {
+    display: flex;
+    margin-top: 32px;
+}
+
+.step__description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    max-width: 320px;
+}
+
+.step__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #243e63;
+}
+
+.step__para {
+    font-size: 14px;
+    color: #718096;
+    font-weight: 500;
+    line-height: 2;
+    margin-top: 12px;
+}
+.step__number {
+    color:#cbd5e0;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* VALUES */
+
+#values .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__title {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.values__description {
+    width: 50%;
+    padding: 32px 64px 32px 0;
+}
+
+.value {
+    font: 16px;
+    margin-top: 32px;
+    margin-right: 32px;
+}
+
+.value__title {
+    display: flex;
+    align-items: center;
+}
+
+.value__img--wrapper{
+    width: 36px;
+    height: 36px;
+    background-color: #9ae6b4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.value__img {
+    height: 20px;
+    width: 20px;
+}
+
+.value__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #243e24;
+    margin-left: 12px;
+}
+
+.value__para {
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.value__list {
+    display: flex;
+}
+
+.values__btn {
+    background-color: #6415ff;
+    margin-top: 48px;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 500px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 300ms;
+}
+
+.values__img {
+    width: 50%;
+}
+
+/* PRICING */
+
+#pricing .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pricing .section__para {
+    max-width: 576px;
+    text-align: center;
+}
+.plans {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    
+}
+
+.plan__stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+}
+
+.plan {
+    width: 100%;
+    max-width: 384px;
+    height: 594px;
+    margin: 64px 32px 0 0;
+    padding-top: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.plan__top .plan__middle .plan__bottom {
+    padding: 32px;
+    text-align: center;
+}
+
+.plan__name .plan__price .plan__duration {
+    font-weight: bold;
+    line-height: 1.625;
+}
+
+.plan__name {
+    font-size: 20px;
+}
+
+.plan__price {
+    font-size: 48px;
+    margin: 4px 0;
+}
+
+.plan__duration {
+    font-size: 16px;
+    letter-spacing: 0.1em;
 }
